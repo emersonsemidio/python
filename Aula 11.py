@@ -1,0 +1,1 @@
+print('\033[mOlá mundo\033[m')
