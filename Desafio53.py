@@ -1,7 +1,13 @@
-a = str(input('Digite uma frase ')).lower()
-if a == ' ':
-    print('\033[31mDigite alguma coisa')
-elif a [::-1] == a:
-    print('Temos um palíndromo!')
+frase = str(input('Digite uma frase ')).lower().strip()
+
+palavras = frase.split()
+junto = ''.join(palavras)
+inverso = ''
+for letra in range(len(junto) - 1, -1, -1):
+    print(junto[letra])
+    inverso = inverso +junto[letra]
+print('O inverso de {')
+if inverso == junto:
+    print('Temos um palíndromo')
 else:
-    print('Não temos um palíndromo!')
+    print('Não temos um palíndromo')

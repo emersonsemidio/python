@@ -10,6 +10,6 @@ while mais != 0:
         print('{}'.format(termo),end=' ')
         termo = termo + razao
         cont = cont + 1
-    print('Pausa')
+    print('\nPausa')
     mais = int(input('Quantos termos você quer mostrar a mais? '))
 print('FIM')

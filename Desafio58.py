@@ -7,20 +7,22 @@ while a != 'SIM':
 print('Olá, sou eu aqui de novo, já vi que você quer brincar, vamos ver se você consegue me vencer')
 print('O jogo consiste em você adivinhar qual número de 0 à 10 eu escolhi')
 b = random.randint(0,10)
-d = int(input('Informe o número: '))
-while d != b:
-    if d > b:
-        print('Tente um número menor')
-    if d < b:
-        print('Tente um número maior')
-    d = int(input('Informe o número desejado: '))
-    cont += 1
-if cont == 1:
-    print('Parabéns, você acertou em 1 tentativa')
+acertou = False
+tentativas = 0
+while acertou == False:
+    d = int(input('Escolha um número: '))
+    tentativas = tentativas + 1
+    if d == b:
+        acertou = True
+    else:
+        if d > b:
+            print('Tente um número menor')
+        if d < b:
+            print('Tente um número maior')
+if tentativas == 1:
+    print('Você acertou em 1 tentativa')
 else:
-    print('Parabéns, você acertou em {} tentaivas'.format(cont+1))
-
-
+    print('Você acertou em {} tentativas'.format(tentativas))
 
 
 

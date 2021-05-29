@@ -1,9 +1,16 @@
+import datetime
+
 print('Grupos de maioriadade')
+atual = datetime.datetime.today().year
 b = 0
 d = 0
-for c in range(1,8):
+cont = 0
+c = 0
+while cont < 7:
+    cont = cont +1
+    c = c + 1
     a = int(input('Em que ano a {}ª pessoa nasceu? '.format(c)))
-    if 2020 - a >= 18:
+    if atual - a >= 18:
         d = d +1
     else:
         b = b +1

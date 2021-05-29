@@ -20,6 +20,6 @@ while a != 5:
     if a ==4:
         int(input('Digite o primeiro valor: '))
         int(input('Digite o segundo valor: '))
-    else:
+    elif a > 5 or a <0:
         print('Opção inválida. Tente novamente')
 print('\033[31mVocê saiu do programa')
